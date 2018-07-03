@@ -53,8 +53,6 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
     @Inject MainActivityPresenter presenter;
     private INavDrawerView navDrawer;
 
-//    private ActionBarDrawerToggle toggle;
-
     @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -65,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         initNavDrawer();
-//        gotoDashboard();
         String lastFrag = getIntent().getStringExtra("current_fragment");
 
 
@@ -76,16 +73,6 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
             lastFrag = presenter.getLatestFrag();
             reloadBackStack(lastFrag);
         }
-
-//        toggle = new ActionBarDrawerToggle(MainActivity.this, drawerLayout, toolbar,
-//            R.string.show_drawer, R.string.hide_drawer) {
-//            public void onDrawerClosed(View view) {
-//            }
-//
-//            public void onDrawerOpened(View drawerView) {
-//            }
-//
-//        };
     }
 
     private void reloadBackStack(String lastFrag) {
@@ -324,8 +311,9 @@ public class MainActivity extends AppCompatActivity implements IMainActivityView
     }
 
     @Override public void gotoWelcome() {
-        Intent i = new Intent(this, WelcomeActivity.class);
-        startActivity(i);
+        //does nothing until the UI is fixed.
+//        Intent i = new Intent(this, WelcomeActivity.class);
+//        startActivity(i);
     }
 
     private void loadFragment(Fragment fragment, String tag,
