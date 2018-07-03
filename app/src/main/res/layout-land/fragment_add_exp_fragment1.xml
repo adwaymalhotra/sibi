@@ -1,0 +1,101 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.admalhot.sibi.primary.addExpense.view.AddExpFragment1">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/DollarSign"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/dollar_sign"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="0" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="How much did you spend?"
+            android:transitionName="@string/add_an_expense"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DollarSign"
+            app:layout_constraintVertical_bias="0.017" />
+
+
+        <EditText
+            android:id="@+id/amount_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:drawableLeft="@drawable/dollar_sign"
+            android:gravity="start|center_vertical"
+            android:hint="10.00"
+            android:drawableTint="#ff000000"
+            android:inputType="numberDecimal"
+            android:transitionName="@string/amount_text"
+            android:lines="1"
+            android:minWidth="144dp"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/mic_imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="8dp"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/amount_et"
+            app:layout_constraintStart_toEndOf="@id/amount_et"
+            app:layout_constraintTop_toTopOf="@id/amount_et" />
+
+        <ImageView
+            android:id="@+id/camera_imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="8dp"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/category_til"
+            app:layout_constraintStart_toEndOf="@+id/mic_imageView"
+            app:layout_constraintTop_toTopOf="@id/category_til" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+
+            android:background="@color/colorAccent"
+            android:drawableLeft="@drawable/blank"
+            android:drawableRight="@drawable/arrow_forward"
+            android:padding="8dp"
+            android:text="give it a name"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/amount_et" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_add_accent_24dp"
+        android:shortcutId="shortcut_add_an_expense"
+        android:shortcutLongLabel="@string/add_an_expense"
+        android:shortcutShortLabel="@string/add_an_expense"
+        app:iconTint="@color/colorAccent">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.sibi.primary.MainActivity"
+            android:targetPackage="com.sibi">
+            <extra
+                android:name="current_fragment"
+                android:value="AddExpFragment1" />
+        </intent>
+    </shortcut>
+</shortcuts>

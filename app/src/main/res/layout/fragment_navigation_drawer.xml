@@ -1,0 +1,95 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/footer"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:fillViewport="true"
+            android:id="@+id/scrollView2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/navigation_header_container"
+                    layout="@layout/navigation_header" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/navdrawer_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="24dp" />
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/lightest_grey"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dashboard_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_home_black_24dp"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/colorAccent"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="@string/dashboard"
+                android:textColor="#000"
+                android:transitionName="name" />
+
+            <TextView
+                android:id="@+id/manage_budgets_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_account_balance_wallet_black"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/colorAccent"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="@string/navdrawer_text2"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/sign_out_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_power_settings_new_black_24dp"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/colorAccent"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="@string/navdrawer_text3"
+                android:textColor="#000" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/nav_fab"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        app:backgroundTint="@color/white"
+        android:src="@drawable/ic_add_accent_24dp"
+        app:layout_anchor="@id/navigation_header_container"
+        app:layout_anchorGravity="bottom|right" />
+</android.support.design.widget.CoordinatorLayout>
+

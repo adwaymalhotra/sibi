@@ -1,0 +1,110 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ShoppingBag"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_shopping_basket"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.232" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Who did you pay?"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ShoppingBag"
+            app:layout_constraintVertical_bias="0.017" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/name_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:hint="@string/enter_name"
+            app:hintAnimationEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/name_et"
+                android:layout_width="match_parent"
+                android:transitionName="@string/enter_name"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:inputType="text"
+                android:textSize="28sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!--<ImageView-->
+        <!--android:id="@+id/mic_imageView"-->
+        <!--android:layout_width="30dp"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_margin="8dp"-->
+        <!--android:src="@mipmap/ic_launcher"-->
+        <!--app:layout_constraintBottom_toBottomOf="@id/name_til"-->
+        <!--app:layout_constraintStart_toEndOf="@id/name_til"-->
+        <!--app:layout_constraintTop_toTopOf="@id/name_til" />-->
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:background="@color/colorAccent"
+            android:drawableRight="@drawable/arrow_forward"
+            android:padding="8dp"
+            android:text="finalize"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amount_et"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/amountPaid_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Amount Paid: $23.00"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:transitionName="@string/amount_text"
+            app:layout_constraintBottom_toBottomOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

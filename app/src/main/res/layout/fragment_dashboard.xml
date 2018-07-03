@@ -1,0 +1,178 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.admalhot.sibi.primary.dashboard.view.DashboardFragment">
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:minHeight="200dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toTopOf="@id/budget_ll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/review_transactions_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="right"
+        android:padding="8dp"
+        android:text="@string/or_review_transactions"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:transitionName="@string/or_review_transactions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/purchase_button"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/colorAccent"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="8dp"-->
+    <!--android:text="@string/plan_a_purchase"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="18sp"-->
+    <!--app:layout_constraintBottom_toTopOf="@id/review_transactions_tv"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent" />-->
+    <FrameLayout
+        android:id="@+id/expense_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:transitionName="@string/add_an_expense"
+        app:layout_constraintBottom_toTopOf="@id/review_transactions_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_add_circle_outline_white"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/add_an_expense"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/budget_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="top"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/expense_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintVertical_bias="0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="2"
+                android:text="@string/monthly_budget"
+                android:textAllCaps="true"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/monthly_budget_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|right"
+                android:textSize="24sp"
+                tools:text="$600" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="2"
+                android:text="@string/spent"
+                android:textAllCaps="true"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/total_spending_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|right"
+                android:textSize="24sp"
+                tools:text="$600" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="2"
+                android:text="@string/available"
+                android:textAllCaps="true"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/available_amount_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|right"
+                android:textSize="24sp"
+                tools:text="$600" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<TextView-->
+    <!--android:id="@+id/wishlist_status_tv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:text="You are on track with your wishlist. Tap to view details."-->
+    <!--android:textSize="18sp"-->
+    <!--android:visibility="gone"-->
+    <!--app:layout_constraintBottom_toTopOf="@id/expense_button"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/budget_ll" />-->
+
+</android.support.constraint.ConstraintLayout>

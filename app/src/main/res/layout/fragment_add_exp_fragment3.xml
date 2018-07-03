@@ -1,0 +1,121 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.admalhot.sibi.primary.addExpense.view.AddExpFragment1">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:background="@color/colorAccent"
+            android:drawableLeft="@drawable/blank"
+            android:drawableRight="@drawable/check"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="finish"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/amountPaid_textView"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorAccent"
+            android:drawableLeft="@drawable/dollar_sign_white"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:transitionName="@string/amount_text"
+            app:layout_constraintBottom_toBottomOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Amount Paid: $23.00" />
+
+        <TextView
+            android:id="@+id/receiver_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_shopping_basket_white"
+            android:background="@color/colorAccent"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:transitionName="@string/enter_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amountPaid_textView"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Receiver: SU Bookstore" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:text="@string/category_text"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/receiver_textView" />
+
+        <EditText
+            android:id="@+id/date_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:drawableRight="@drawable/calendar"
+            android:inputType="none"
+            android:text="TextView"
+            android:textSize="24sp"
+            android:clickable="true"
+            android:editable="false"
+            android:focusable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/category_et"
+            app:layout_constraintVertical_bias="0" />
+
+        <EditText
+            android:id="@+id/category_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:inputType="none"
+            android:textSize="24sp"
+            android:clickable="true"
+            android:editable="false"
+            android:focusable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView3"
+            app:layout_constraintVertical_bias="0"
+            tools:text="Others" />
+
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>
